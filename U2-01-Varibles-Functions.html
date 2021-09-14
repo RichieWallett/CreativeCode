@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <body>
+        <canvas width="600" height="600"></canvas>
+
+        <script>
+
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.fillStyle = 'blue';
+            context.fillRect(100,100,400,400); // This Draws it
+
+            let year = 2042;
+            let nextYear = year + 1;
+
+            let dinner = 'salad';
+            let sentance = 'Tonight we will eat ' + dinner;
+
+            function saySomething(param) {
+                console.log(param);
+            }
+
+            saySomething(sentance);
+
+            // Long Function version
+            function add(a, b) {
+                return a + b;
+            }
+
+            let result = add(5, 7);
+            console.log(result);
+
+            // Fat Arrow version
+            let multiply = (a, b) => {
+                return a * b;
+            }
+
+            console.log(multiply(5, 7));
+
+
+
+
+        </script>
+    
+    
+    
+    
+    </body>
+</html>

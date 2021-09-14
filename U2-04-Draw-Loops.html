@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <title>Arrays, Loops, Conditionals t.ly/uThm</title>
+    </head>
+    <body>
+        <canvas width="600" height="600"></canvas>
+
+        <script>
+
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            const width = 60;
+            const height = 60;
+            const gap = 20;
+            let x, y; // No initail value so just declare them
+
+            // Nested Loop Draw i horizontal j vertical
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    x = 100 + (width + gap) * i;
+                    y = 100 + (height + gap) * j;
+                    
+                    // Outer rect
+                    context.beginPath();
+                    context.rect(x, y, width, height);
+                    context.stroke();
+                
+                // Conditional if (i > 0 && i < 4)  
+                // Random is a value between 0 and 1
+                if (Math.random() > 0.5) {
+                    // Inner rect
+                    context.beginPath();
+                    context.rect(x + 8, y + 8, width -16 , height - 16);
+                    context.stroke();
+                    }
+                }
+            }
+            
+
+        </script>
+    </body>
+</html>
